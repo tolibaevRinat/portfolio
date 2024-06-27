@@ -1,19 +1,24 @@
+import { Suspense, lazy } from 'react';
 import './scss/style.scss';
 
-import Header from './components/Header';
-import Portfolio from './components/Portfolio';
-import Contacts from './components/Contacts';
-import Footer from './components/Footer';
+import { Preloader } from './components/Preloader';
+
+const Header = lazy(() => import('./components/Header'));
+const Portfolio = lazy(() => import('./components/Portfolio'));
+const Contacts = lazy(() => import('./components/Contacts'));
+const Footer = lazy(() => import('./components/Footer'));
 
 const App = () => (
-  <>
-    <Header />
-    <main className="page">
-      <Portfolio />
-      <Contacts />
-    </main>
-    <Footer />
-  </>
+  <Suspense fallback={<Preloader />}>
+    <>
+      <Header />
+      <main className="page">
+        <Portfolio />
+        <Contacts />
+      </main>
+      <Footer />
+    </>
+  </Suspense>
 );
 
 export default App;
