@@ -1,0 +1,17 @@
+@import '../../scss/modules/vars';
+@import '../../scss/modules/functions';
+@import '../../scss/modules/mixins';
+
+.footer {
+  background-color: #1e1e1e;
+  padding: toRem(30) 0;
+
+  color: #5d5d5d;
+
+  h2,
+  p {
+    font-size: toRem(14);
+    text-align: center;
+    line-height: calc(20 / 14);
+  }
+}

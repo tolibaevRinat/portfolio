@@ -1,0 +1,65 @@
+@import '../../scss/modules/vars';
+@import '../../scss/modules/functions';
+@import '../../scss/modules/mixins';
+
+.contacts {
+  padding: toRem(40) 0;
+
+  @media (min-width: toEm($tablet)) {
+    padding: toRem(80) 0;
+  }
+
+  background-color: #252525;
+  border-top-left-radius: toRem(100);
+  color: #fff;
+}
+.title {
+  text-align: center;
+
+  margin-bottom: toRem(20);
+  @media (min-width: toEm($tablet)) {
+    margin-bottom: toRem(65);
+  }
+
+  font-size: toRem(30);
+  @media (min-width: toEm($mobile)) {
+    font-size: toRem(52);
+  }
+  font-weight: 700;
+}
+.list {
+  gap: toRem(30);
+  flex-wrap: wrap;
+  li {
+    flex-grow: 1;
+    @media (min-width: toEm($mobileSmall)) {
+      min-width: toRem(370);
+    }
+  }
+}
+.link {
+  padding: toRem(20);
+  border-radius: toRem(12);
+  @media (min-width: toEm($mobile)) {
+    padding: toRem(20);
+    border-radius: toRem(20);
+  }
+
+  gap: toRem(14);
+  border: toRem(1) solid #363636;
+
+  font-size: toRem(16);
+
+  @media (min-width: toEm($mobile)) {
+    font-size: toRem(20);
+  }
+}
+.img {
+  flex-shrink: 0;
+  flex-basis: toRem(32);
+  height: toRem(32);
+  @media (min-width: toEm($mobile)) {
+    flex-basis: toRem(48);
+    height: toRem(48);
+  }
+}

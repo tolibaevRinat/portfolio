@@ -1,0 +1,72 @@
+@import '../../scss/modules/vars';
+@import '../../scss/modules/functions';
+@import '../../scss/modules/mixins';
+
+.portfolio {
+  padding: toRem(40) 0;
+
+  @media (min-width: toEm($tablet)) {
+    padding: toRem(80) 0;
+  }
+}
+.title {
+  font-size: toRem(30);
+  @media (min-width: toEm($mobile)) {
+    font-size: toRem(52);
+  }
+  text-align: center;
+  font-weight: 700;
+
+  margin-bottom: toRem(20);
+  @media (min-width: toEm($tablet)) {
+    margin-bottom: toRem(65);
+  }
+}
+.list {
+  gap: toRem(40);
+  @media (min-width: toEm($tablet)) {
+    gap: toRem(70);
+  }
+}
+.item {
+  display: block;
+  text-align: center;
+}
+.img {
+  max-width: toRem(970);
+  margin: 0 auto;
+
+  height: toRem(200);
+  @media (min-width: toEm($mobileSmall)) {
+    height: toRem(320);
+  }
+  @media (min-width: toEm($mobile)) {
+    height: toRem(400);
+  }
+  @media (min-width: toEm($tablet)) {
+    height: toRem(450);
+  }
+  border-radius: toRem(30);
+  overflow: hidden;
+
+  margin-bottom: toRem(20);
+  @media (min-width: toEm($tablet)) {
+    margin-bottom: toRem(30);
+  }
+  @media (any-hover: hover) {
+    &:hover img {
+      filter: opacity(0.8);
+    }
+  }
+
+  img {
+    transition: filter 0.2s ease-in;
+    object-position: top;
+  }
+}
+.subtitle {
+  font-size: toRem(18);
+  @media (min-width: toEm($mobile)) {
+    font-size: toRem(22);
+  }
+}

@@ -1,0 +1,129 @@
+@import '../../scss/modules/vars';
+@import '../../scss/modules/functions';
+@import '../../scss/modules/mixins';
+
+.header {
+  position: relative;
+  background: #252525 linear-gradient(158deg, #2f2f2f 0%, #202020 100%);
+  @media (min-width: toEm($mobileSmall)) {
+    background-color: #000;
+  }
+  color: #fff;
+
+  padding: toRem(20) 0;
+  @media (min-width: toEm($mobileSmall)) {
+    padding: toRem(40) 0;
+  }
+  @media (min-width: toEm($tablet)) {
+    padding: toRem(80) 0;
+  }
+
+  border-bottom-right-radius: toRem(60);
+  @media (min-width: toEm($mobile)) {
+    border-bottom-right-radius: toRem(100);
+  }
+  overflow: hidden;
+}
+.img {
+  img {
+    max-width: 100%;
+  }
+
+  border-radius: toRem(20);
+  @media (min-width: toEm($mobileSmall)) {
+    border-radius: toRem(40);
+  }
+  @media (min-width: toEm($tablet)) {
+    border-radius: toRem(80);
+  }
+  @media (min-width: toEm($tablet)) {
+    flex-basis: toRem(540);
+  }
+
+  height: toRem(200);
+  @media (min-width: toEm($mobileSmall)) {
+    height: toRem(320);
+  }
+  @media (min-width: toEm($mobile)) {
+    height: toRem(400);
+  }
+  @media (min-width: toEm($tablet)) {
+    height: toRem(470);
+  }
+
+  overflow: hidden;
+  @media (max-width: toEm($tablet)) {
+    margin-bottom: toRem(20);
+  }
+}
+.body {
+  position: relative;
+  z-index: 5;
+  @media (min-width: toEm($tablet)) {
+    display: flex;
+    align-items: center;
+    gap: toRem(50);
+  }
+}
+.title {
+  font-weight: 700;
+  font-size: toRem(40);
+  @media (min-width: toEm($mobile)) {
+    font-size: toRem(60);
+  }
+
+  margin-bottom: toRem(10);
+}
+.descr {
+  font-weight: 300;
+  font-size: toRem(20);
+  @media (min-width: toEm($mobile)) {
+    font-size: toRem(26);
+  }
+  margin-bottom: toRem(30);
+  text-wrap: balance;
+}
+.btns {
+  @media (max-width: toEm($mobileSmall)) {
+    flex-wrap: wrap;
+  }
+}
+.link {
+  width: toRem(146);
+  min-height: toRem(48);
+  padding: toRem(4);
+  border-radius: toRem(8);
+
+  background-color: transparent;
+  font-size: toRem(16);
+
+  border: toRem(1) solid #3b3b3b;
+
+  @media (any-hover: hover) {
+    transition: background-color 0.3s, border-color 0.3s;
+    &:hover {
+      background-color: #1792cf;
+      border-color: #1792cf;
+    }
+  }
+}
+.github {
+  img {
+    max-width: 100%;
+  }
+  width: toRem(50);
+  height: toRem(50);
+}
+.video {
+  filter: opacity(0.6);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  @media (max-width: toEm($mobile)) {
+    border-bottom-right-radius: toRem(60);
+  }
+}
